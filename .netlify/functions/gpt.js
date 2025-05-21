@@ -20,7 +20,6 @@ exports.handler = async function(event, context) {
         { role: "user", content: `Entscheidungssituation:\nFrage: ${frage}\nEntscheidung: ${entscheidung}\nWerte: ${werte}` }
       ]
     });
-
     return {
       statusCode: 200,
       body: JSON.stringify({ antwort: completion.data.choices[0].message.content })
